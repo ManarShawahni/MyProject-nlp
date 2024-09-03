@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>NLP PROJECT</title>
+    <link rel="stylesheet" href="../styles/reset.scss">
+    <link rel="stylesheet" href="../styles/main.scss">
+</head>
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <a href="#home">Home</a>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="form-section">
+            <form id="urlForm" class="url-form" onsubmit="handleClick(event)">
+                <input id="url" type="url" name="url" placeholder="Enter URL here" class="input-url">
+                <button id="submitButton" type="submit" class="submit-button">Analyze</button>
+            </form>
+        </section>
+        <section>
+            <p id="error" class="error-message"></p>
+        </section>
+        <section class="results">
+            <strong>Form Results:</strong>
+            <div id="results" class="results"></div>
+            <div id="agreement" class="result-item">Agreement: N/A</div>
+            <div id="subjectivity" class="result-item">Subjectivity: N/A</div>
+            <div id="score_tag" class="result-item">Score Tag: N/A</div>
+            <div id="confidence" class="result-item">Confidence: N/A</div>
+            <div id="irony" class="result-item">Irony: N/A</div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Manar Shawahni. All rights reserved.</p>
+    </footer>
+</body>
+</html>
