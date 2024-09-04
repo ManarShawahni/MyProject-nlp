@@ -30,21 +30,26 @@ npm -v
 
 ### Installation
 
-1. **Download the project file and extract it**
+1. **Download the project** and unzip it to your preferred directory
+   or
 
-2. **Navigate to the Project Directory**:
+   ```bash
+   git clone https://repository-url.git
+   ```
+
+3. **Navigate to the Project Directory -> to "MyProject"**:
 
    ```bash
    cd <project-directory>
    ```
 
-3. **Install Dependencies**:
+4. **Install Dependencies**:
 
    ```bash
    npm install
    ```
 
-4. **API Key Configuration**:
+5. **API Key Configuration**:
    - Sign up and obtain an API key from [MeaningCloud](https://www.meaningcloud.com/developer/create-account).
    - Install the dotenv package to manage your environment variables:
      ```bash
@@ -52,7 +57,8 @@ npm -v
      ```
    - Create a `.env` file in the root directory of the project and add your API key:
      ```plaintext
-     API_KEY=**************************
+     PORT=8001
+     APIKEY=**************************
      ```
 
 ### Development Setup
@@ -61,31 +67,46 @@ npm -v
    Ensure that your development environment is set up with the necessary tools:
 
    ```bash
+   npm install --save-dev nodemon
    npm install --save-dev @babel/core @babel/preset-env babel-loader
+   npm install --save-dev webpack webpack-cli webpack-dev-server
    npm install --save-dev style-loader node-sass css-loader sass-loader
    npm install --save-dev clean-webpack-plugin html-webpack-plugin
+   npm install --save-dev html-webpack-plugin clean-webpack-plugin
    npm install --save-dev mini-css-extract-plugin optimize-css-assets-webpack-plugin terser-webpack-plugin
+
+   ```
+
+   ### Production Build
+
+   This is to create a production build, run:
+
+   ```bash
+   npm run build
    ```
 
 2. **Running the Development Server**:
+
+   ```bash
+   cd .\src\
+   ```
+
+   To make sure finding the webpack-dev-server you should run this command!:
+
+   ```bash
+    npm update webpack webpack-cli webpack-dev-server
+   ```
+   Then run: 
    ```bash
    npm run dev
    ```
 
-### Production Build
-
-To create a production build, run:
-
-```bash
-npm run build
-```
-
 ### Start the Server
 
-To start the backend server, run:
+To start the backend server, you should be on the project Directory run:
 
 ```bash
-node index.js
+npm start
 ```
 
 3. **Install Jest for Testing**:
